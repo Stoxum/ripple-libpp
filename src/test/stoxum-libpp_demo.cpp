@@ -17,15 +17,15 @@
 */
 //==============================================================================
 
-#include <ripple/protocol/AccountID.h>
-#include <ripple/protocol/digest.h>
-#include <ripple/protocol/HashPrefix.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Sign.h>
-#include <ripple/protocol/st.h>
-#include <ripple/protocol/TxFlags.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/json/to_string.h>
+#include <stoxum/protocol/AccountID.h>
+#include <stoxum/protocol/digest.h>
+#include <stoxum/protocol/HashPrefix.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Sign.h>
+#include <stoxum/protocol/st.h>
+#include <stoxum/protocol/TxFlags.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/json/to_string.h>
 #include <stoxum-libpp/version.hpp>
 #include <boost/version.hpp>
 #include <algorithm>

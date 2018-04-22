@@ -84,7 +84,7 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_executable(stoxumlibppdemo
     ${demo_src}
-    $<TARGET_OBJECTS:ripplelibpp>)
+    $<TARGET_OBJECTS:stoxumlibpp>)
 
 set_startup_project(stoxumlibppdemo)
 
