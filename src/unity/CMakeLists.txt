@@ -86,5 +86,5 @@ add_with_props(lib_src stoxum-libpp.cpp
 add_with_props(lib_src ../../extras/stoxumd/src/stoxum/unity/ed25519_donna.c
   -I"${CMAKE_CURRENT_SOURCE_DIR}/../../extras/stoxumd/src/ed25519-donna")
 
-add_library(stoxumlibpp OBJECT ${lib_src} ${stoxumd_src})
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+add_library(stoxumlibpp STATIC ${lib_src} ${rippled_src})

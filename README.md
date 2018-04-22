@@ -11,7 +11,7 @@ before submission to the Stoxum Consensus Ledger
 Duplicates much of the functionality of the
 [`sign`](https://ripple.com/build/rippled-apis/#sign)
 RPC function without the overhead of a JSON library,
-network delays, needing to trust a 3rd party's stoxumd,
+network delay<stoxum/protocols, needing to trust a 3rd party's stoxumd,
 nor needing to run your own stoxumd.
 
 ## Table of contents

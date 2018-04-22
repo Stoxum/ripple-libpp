@@ -82,14 +82,13 @@ endif()
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-add_executable(stoxumlibppdemo
-    ${demo_src}
-    $<TARGET_OBJECTS:stoxumlibpp>)
+add_executable(stoxumlibppdemo ${demo_src})
 
 set_startup_project(stoxumlibppdemo)
 
 target_link_libraries(stoxumlibppdemo
     ${OPENSSL_LIBRARIES}
-    ${SANITIZER_LIBRARIES})
+    ${SANITIZER_LIBRARIES}
+    stoxumlibpp)
 
 link_common_libraries(stoxumlibppdemo)
