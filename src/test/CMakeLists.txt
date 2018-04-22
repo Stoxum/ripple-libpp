@@ -1,7 +1,7 @@
-# cmake file for ripplelibppdemo
+# cmake file for stoxumlibppdemo
 
 list(APPEND CMAKE_MODULE_PATH
-  "${CMAKE_CURRENT_SOURCE_DIR}/../../extras/rippled/Builds/CMake")
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../extras/stoxumd/Builds/CMake")
 include(CMakeFuncs)
 
 if (nonunity)
@@ -21,9 +21,9 @@ check_gcc4_abi()
 
 include_directories(
   SYSTEM
-  ../../extras/rippled/src
-  ../../extras/rippled/src/beast/include
-  ../../extras/rippled/src/beast/extras
+  ../../extras/stoxumd/src
+  ../../extras/stoxumd/src/beast/include
+  ../../extras/stoxumd/src/beast/extras
   ../../src/include)
 
 special_build_flags()
@@ -43,7 +43,7 @@ setup_build_boilerplate()
 
 ############################################################
 
-set(demo_src ripple-libpp_demo.cpp)
+set(demo_src stoxum-libpp_demo.cpp)
 
 ############################################################
 
@@ -51,8 +51,8 @@ if (WIN32 OR is_xcode)
   file(GLOB_RECURSE all_headers
     src/*.hpp
     src/*.h
-    ../../extras/rippled/src/*.hpp
-    ../../extras/rippled/src/*.h
+    ../../extras/stoxumd/src/*.hpp
+    ../../extras/stoxumd/src/*.h
     ../../extras/*/CMakeFuncs.cmake)
   list(APPEND demo_src "${all_headers}")
 
@@ -74,22 +74,22 @@ endif()
 
 if (WIN32 OR is_xcode)
   group_sources(src)
-  group_sources(extras/rippled/src)
-  group_sources(extras/rippled/Builds)
+  group_sources(extras/stoxumd/src)
+  group_sources(extras/stoxumd/Builds)
 endif()
 
 ############################################################
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-add_executable(ripplelibppdemo
+add_executable(stoxumlibppdemo
     ${demo_src}
     $<TARGET_OBJECTS:ripplelibpp>)
 
-set_startup_project(ripplelibppdemo)
+set_startup_project(stoxumlibppdemo)
 
-target_link_libraries(ripplelibppdemo
+target_link_libraries(stoxumlibppdemo
     ${OPENSSL_LIBRARIES}
     ${SANITIZER_LIBRARIES})
 
-link_common_libraries(ripplelibppdemo)
+link_common_libraries(stoxumlibppdemo)

@@ -1,6 +1,6 @@
-# This is an demonstration cmake build file for ripple-libpp
+# This is an demonstration cmake build file for stoxum-libpp
 #
-# cmake support in ripple-libpp. Currently supports:
+# cmake support in stoxum-libpp. Currently supports:
 #
 #  * debug/release
 #  * sanitizer builds
@@ -56,11 +56,11 @@
 # has similar constraints.
 cmake_minimum_required(VERSION 3.1.0)
 list(APPEND CMAKE_MODULE_PATH
-  "${CMAKE_CURRENT_SOURCE_DIR}/extras/rippled/Builds/CMake")
+  "${CMAKE_CURRENT_SOURCE_DIR}/extras/stoxumd/Builds/CMake")
 include(CMakeFuncs)
 set(openssl_min 1.0.2)
 parse_target()
-project(ripple-libpp)
+project(stoxum-libpp)
 #########################################################
 
 ############################################################

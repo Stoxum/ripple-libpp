@@ -19,7 +19,7 @@ environment:
   matrix:
   - build: cmake
     target: msvc.debug
-    app: ripplelibppdemo
+    app: stoxumlibppdemo
 
 os: Visual Studio 2015
 
@@ -43,7 +43,7 @@ install:
           Start-FileDownload $env:PIP_URL
           Start-FileDownload $env:PYWIN32_URL
 
-          & extras/rippled/bin/ci/windows/install-dependencies.bat
+          & extras/stoxumd/bin/ci/windows/install-dependencies.bat
         }
 
   # Download dependencies if appveyor didn't restore them from the cache.

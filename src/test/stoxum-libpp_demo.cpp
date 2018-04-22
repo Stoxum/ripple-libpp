@@ -26,7 +26,7 @@
 #include <ripple/protocol/TxFlags.h>
 #include <ripple/basics/StringUtilities.h>
 #include <ripple/json/to_string.h>
-#include <ripple-libpp/version.hpp>
+#include <stoxum-libpp/version.hpp>
 #include <boost/version.hpp>
 #include <algorithm>
 
@@ -294,14 +294,14 @@ bool multisign (ripple::STTx& tx, Credentials const& signer)
     assert (pass);
 
     // To submit multisigned JSON to the network use this RPC command:
-    // $ rippled submit_multisigned '<all JSON>'
+    // $ stoxumd submit_multisigned '<all JSON>'
     std::cout << "\nMultisigned JSON: \n"
         << tx.getJson(0, false).toStyledString()  << std::endl;
 
     // Alternatively, to submit the multisigned blob to the network:
     //  1. Extract the hex string (including the quotes) following "tx"
     //  2. Then use this RPC command:
-    //     $ rippled submit <quoted hex string>
+    //     $ stoxumd submit <quoted hex string>
     std::cout << "Multisigned blob:"
         << tx.getJson(0, true) << std::endl;
 
@@ -341,14 +341,14 @@ int main (int argc, char** argv)
                             __GNUC_PATCHLEVEL__;
 
     static_assert (gccver >= 50100,
-        "GCC version 5.1.0 or later is required to compile rippled.");
+        "GCC version 5.1.0 or later is required to compile stoxumd.");
 #endif
 
     static_assert (BOOST_VERSION >= 105700,
-        "Boost version 1.57 or later is required to compile rippled");
+        "Boost version 1.57 or later is required to compile stoxumd");
 
     // Display the version
-    std::cout << "ripple-libpp_demo version " <<
+    std::cout << "stoxum-libpp_demo version " <<
         RIPPLE_LIBPP_VERSION_STRING << "\n";
 
     // Demonstrate single signing.
