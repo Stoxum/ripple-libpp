@@ -1,4 +1,4 @@
 [submodule "extras/stoxumd"]
 	path = extras/stoxumd
-	url = https://github.com/Stoxum/stoxumd.git
+	url = git@github.com:Stoxum/stoxumd.git
 	branch = master
